@@ -8,16 +8,16 @@ services:
       REACT_APP_API_URL: http://localhost:3001
     depends_on:
       - api
-    networks:
-      - app-network
+    # networks:
+    #   - app-network
       
   api:
     build: ./my-express-docker
     ports:
       - 3001:3001
-    networks:
-      - app-network
+    # networks:
+    #   - app-network
 
-networks:
-  app-network:
-    driver: bridge
+# networks:
+#   app-network:
+#     driver: bridge
